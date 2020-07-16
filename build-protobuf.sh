@@ -81,7 +81,8 @@ PROTOBUF_SRC_DIR=/tmp/protobuf
 # 13.4.0 - Mavericks
 # 14.0.0 - Yosemite
 # 15.0.0 - El Capitan
-DARWIN=darwin14.0.0
+DARWIN_RELEASE_VERSION=`uname -r`
+DARWIN="darwin${DARWIN_RELEASE_VERSION}"
 
 XCODEDIR=`xcode-select --print-path`
 IOS_SDK_VERSION=`xcrun --sdk iphoneos --show-sdk-version`
@@ -130,6 +131,7 @@ echo "BUILD_IOS_ARMV7S ........... ${BUILD_IOS_ARMV7S}"
 echo "BUILD_IOS_ARM64 ............ ${BUILD_IOS_ARM64}"
 echo "PROTOBUF_SRC_DIR ........... ${PROTOBUF_SRC_DIR}"
 echo "DARWIN ..................... ${DARWIN}"
+echo "DARWIN_RELEASE_VERSION...... ${DARWIN_RELEASE_VERSION}"
 echo "XCODEDIR ................... ${XCODEDIR}"
 echo "IOS_SDK_VERSION ............ ${IOS_SDK_VERSION}"
 echo "MIN_SDK_VERSION ............ ${MIN_SDK_VERSION}"
